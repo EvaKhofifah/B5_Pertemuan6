@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 1</title>
+    <script src="Pert6_dom.js">
+    </script>
+</head>
+<body>
+
+    <input type="color" name="bg-color" onchange="setBGColor"><br>
+    <input type="color" name="text-color" onchange="setTextColor(this.value)"><br>
+
+    <div id="bagian1">bagian 1</div>
+    <div id="bagian2" class="rata_tengah"><h2>bagian 2</h2></div>
+    <div id="bagian3" class="rata_kiri"><h2>bagian 3</h2></div>
+    <div id="bagian4" class="rata_kanan">bagian 4</div>
+
+    <script>
+        document.getElementById('bagian1').style.background ="red";
+        document.getElementById('bagian1').style.color ="white";
+
+        let bagian2 = document.querySelector('#bagian2');
+        bagian2.style.background ="blue";
+        bagian2.style.color ="yellow";
+
+        let rataTengah = document.querySelector('.rata_tengah');
+        rataTengah.style.textAlign ="center";
+
+        let h1 = document.getElementsByClassName('h1');
+        // console.log(h1);
+        let fontSize='';
+
+        for (let i = 0; i < h1, lenght; i++) {
+            if (i==0) {
+                fontSize = '50px';
+            }
+            else if (i==1) {
+                size = '100px';
+                
+            }
+            else if (i==2) {
+                size = '150px';
+
+            }
+            h1[i].style.fontSize = size;
+        }
+
+        let judul = document.createElement('h3');
+        let konten = document.createElement('p');
+
+        judul.textContent = "welcome in js";
+        konten.textContent = "saya dimasukkan ke dalam div";
+
+        document.body.append(judul);
+        document.getElementById('bagian1').append(konten);
+
+        //ini menghapus bagian 4
+        document.getElementById('bagian4').remove();
+
+
+        function setBGColor(warna){
+            document.body.style.backgroundColor = warna;
+        }
+
+        function setTextColor(warna){
+            document.body.style.backgroundColor = warna;
+        }
+    </script>
+</body>
+</html>

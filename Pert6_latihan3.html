@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>latihan 3</title>
+</head>
+<body>
+    
+    <script>
+        let pola = /JavaScript/;
+        let kalimat = "saya belajar JavaScript";
+
+        //case-sensitive ==> peduli dengan besar / kecil
+        //case-insensitive => tidak peduli degn bessar kecil
+
+        console.log(pola);
+        console.log(typeof pola);
+
+        console.log(pola).test(kalimat);
+
+        console.log(pola.test('saya belajar Javascript'));
+        console.log(pola.test('Javascript meneyenangkan'));
+
+        console.log('===========');
+
+        let pola2 = /[abcde]../;
+        console.log(pola2.test('abaa'));
+        console.log(pola2.test('fba'));
+        console.log(pola2.test('idd'));
+        console.log(pola2.test('add'));
+        console.log(pola2.test('belajar'));
+
+    </script>
+</body>
+</html>
